@@ -12,9 +12,9 @@ import { rateLimiter } from "./src/middleware/rateLimit.js";
 
 //import api routes
 import userRoutes from "./src/routes/user.routes.js";
-import bookingRoutes from "./src/routes/booking.routes.js"
-import paymentRoutes from "./src/routes/payment.routes.js"
-import adminRoutes from "./src/routes/admin.routes.js"
+import bookingRoutes from "./src/routes/booking.routes.js";
+import paymentRoutes from "./src/routes/payment.routes.js";
+import adminRoutes from "./src/routes/admin.routes.js";
 
 //initialize express
 const app = express();
@@ -28,7 +28,7 @@ const httpServer = createServer(app);
 //5 - response is finally sent to the client
 app.use(
   cors({
-    origin: ["http://localhost:4200"], //permits domains specified to talk to server
+    origin: ["http://localhost:4200", "https://laundry-wash-client.vercel.app"], //permits domains specified to talk to server
     credentials: true, //allows cookies to be sent to client
     methods: ["GET", "POST", "PATCH", "DELETE", "OPTIONS"], //permitted http methods
     optionsSuccessStatus: 200, //default status code
@@ -61,9 +61,9 @@ app.get("/", (req, res) => {
 
 //assemble api routes
 app.use("/api/v1/user", userRoutes);
-app.use("/api/v1/booking", bookingRoutes)
-app.use("/api/v1/payment", paymentRoutes)
-app.use("/api/v1/admin", adminRoutes)
+app.use("/api/v1/booking", bookingRoutes);
+app.use("/api/v1/payment", paymentRoutes);
+app.use("/api/v1/admin", adminRoutes);
 
 // "/booking/create"
 
