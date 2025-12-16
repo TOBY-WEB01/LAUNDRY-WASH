@@ -32,7 +32,7 @@ export default function Home() {
           )}
         </div>
         <div className="mt-20 px-4 md:px-7 lg:px-0 ">
-          <img src="./public/Frame 30.png" alt="" className="w-full pb-20" />
+          <img src="/Frame 30.png" alt="" className="w-full pb-20" />
         </div>
       </div>
       <section className= "bg-[#262626] py-10 px-2">
@@ -58,7 +58,7 @@ export default function Home() {
           <div className="grid grid-cols-12 gap-6 lg:px-0  md:px-4">
             <div className="col-span-12 md:col-span-4 py-2 bg-[#454545] border-0 rounded-2xl ">
               <img
-                src="./public/image 7.png"
+                src="./image 7.png"
                 alt=""
                 className=" mx-auto md:w-[400px] pb-4"
               />
@@ -71,7 +71,7 @@ export default function Home() {
             </div>
             <div className="col-span-12 md:col-span-4 py-2 bg-[#454545] border-0 rounded-2xl ">
               <img
-                src="./public/image 8.png"
+                src="./image 8.png"
                 alt=""
                 className=" mx-auto md:w-[400px] pb-4"
               />
@@ -84,7 +84,7 @@ export default function Home() {
             </div>
             <div className="col-span-12 md:col-span-4 py-2 bg-[#454545] border-0 rounded-2xl ">
               <img
-                src="./public/image500.png"
+                src="./image500.png"
                 alt=""
                 className=" mx-auto md:w-[400px] pb-4"
               />
@@ -118,7 +118,7 @@ export default function Home() {
         <div className="md:grid grid-cols-12 gap-12 pt-10 space-y-6">
           <div className="md:col-span-4">
             <img
-              src="./public/calendar-svgrepo-com (2).png"
+              src="./calendar-svgrepo-com (2).png"
               alt=""
               className="mx-auto"
             />
@@ -132,7 +132,7 @@ export default function Home() {
           </div>
           <div className="col-span-4">
             <img
-              src="./public/shield-keyhole-minimalistic-svgrepo-com.png"
+              src="./shield-keyhole-minimalistic-svgrepo-com.png"
               alt=""
               className="mx-auto"
             />
@@ -147,7 +147,7 @@ export default function Home() {
           </div>
           <div className="col-span-4">
             <img
-              src="./public/delivery-svgrepo-com.png"
+              src="./delivery-svgrepo-com.png"
               alt=""
               className="mx-auto"
             />
@@ -179,7 +179,7 @@ export default function Home() {
             </p>
           </div>
           <div className="col-span-6">
-            <img src="./public/Rectangle 1.png" alt="" className="w-[500px]" />
+            <img src="./Rectangle 1.png" alt="" className="w-[500px]" />
           </div>
         </div>
         <div>
@@ -196,7 +196,7 @@ export default function Home() {
             <div className="bg-(--cardBg) reviews rounded-tl-[35px] rounded-tr-[35px] rounded-br-[40px] rounded-bl-[40px] cursor-pointer">
               <div className="p-5 text-sm bg-(--bgGrey) rounded-tr-[30px] rounded-tl-[30px]  rounded-br-[30px]">
                 <span className="flex gap-3 pb-3">
-                  <img src="./public/rating.png" alt="" />
+                  <img src="./rating.png" alt="" />
                   <span>4/5</span>
                 </span>
                 <p>
@@ -211,7 +211,7 @@ export default function Home() {
               <div className="bg-(--purple) rounded-tl-[40px] rounded-br-[40px] rounded-bl-[40px] p-2">
                 <span className="p-2">
                   <div className="flex px-2 gap-3">
-                    <img src="public/user_profile.png" alt="" />
+                    <img src="./user_profile.png" alt="" />
                     <div>
                       <h2 className="text-xl font-medium">Maxin Will</h2>
                       <p className="text-sm">Product Manager</p>
@@ -223,7 +223,7 @@ export default function Home() {
             <div className="bg-(--cardBg) reviews rounded-tl-[35px] rounded-tr-[35px] rounded-br-[40px] rounded-bl-[40px] cursor-pointer">
               <div className="p-5 text-sm bg-(--bgGrey) rounded-tr-[30px] rounded-tl-[30px]  rounded-br-[30px]">
                 <span className="flex gap-3 pb-3">
-                  <img src="public/rating.png" alt="" />
+                  <img src="./rating.png" alt="" />
                   <span>4/5</span>
                 </span>
                 <p>
@@ -238,7 +238,7 @@ export default function Home() {
               <div className="bg-(--purple) rounded-tl-[40px] rounded-br-[40px] rounded-bl-[40px] p-2">
                 <span className="p-2">
                   <div className="flex px-2 gap-3">
-                    <img src="public/user_profile.png" alt="" />
+                    <img src="./user_profile.png" alt="" />
                     <div>
                       <h2 className="text-xl font-medium">Maxin Will</h2>
                       <p className="text-sm">Product Manager</p>
@@ -250,7 +250,7 @@ export default function Home() {
             <div className="bg-(--cardBg) reviews rounded-tl-[35px] rounded-tr-[35px] rounded-br-[40px] rounded-bl-[40px] cursor-pointer">
               <div className="p-5 text-sm bg-(--bgGrey) rounded-tr-[30px] rounded-tl-[30px]  rounded-br-[30px]">
                 <span className="flex gap-3 pb-3">
-                  <img src="public/rating.png" alt="" />
+                  <img src="./rating.png" alt="" />
                   <span>4/5</span>
                 </span>
                 <p>
@@ -265,7 +265,7 @@ export default function Home() {
               <div className="bg-(--purple) rounded-tl-[40px] rounded-br-[40px] rounded-bl-[40px] p-2">
                 <span className="p-2">
                   <div className="flex px-2 gap-3">
-                    <img src="public/user_profile.png" alt="" />
+                    <img src="./user_profile.png" alt="" />
                     <div>
                       <h2 className="text-xl font-medium">Maxin Will</h2>
                       <p className="text-sm">Product Manager</p>
@@ -279,7 +279,7 @@ export default function Home() {
       </section>
       <section className="md:flex gap-10">
         <div>
-          <img src="/public/Rectangle 10.png" alt=""  className="w-[900px]"/>
+          <img src="./Rectangle 10.png" alt=""  className="w-[900px]"/>
         </div>
         <div className="my-auto">
           <div className="lg:mr-70 md:mr-30 mb-8">
