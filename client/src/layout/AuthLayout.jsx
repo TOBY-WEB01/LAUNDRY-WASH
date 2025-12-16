@@ -6,7 +6,7 @@ export default function AuthLayout() {
     <section className="grid grid-cols-12 items-center justify-center min-h-screen">
       <div
         className="hidden md:block col-span-6 h-full  "
-        style={{ backgroundImage: "url('/public/image 9.png')" }}
+        style={{ backgroundImage: "url('./image 9.png')" }}
       >
         <div className="flex flex-col h-full justify-between py-4 px-6">
           <div className="flex justify-center">
