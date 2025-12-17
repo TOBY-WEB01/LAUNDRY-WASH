@@ -27,7 +27,7 @@ export default function ResetPassword() {
     mutationFn: resetPassword,
     onSuccess: (res) => {
       toast.success(res.data.message || "Registration Successful");
-      navigate("/login");
+      navigate("/auth/login");
     },
     onError: (error) => {
       import.meta.env.DEV && console.error(error);

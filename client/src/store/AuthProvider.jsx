@@ -1,3 +1,4 @@
+
 import { AuthProviderContext } from "@/hooks/useAuth";
 import { useQueryClient, useMutation } from "@tanstack/react-query";
 import { getAuthUser, logoutUser, refreshAccessToken } from "@/api/auth";
@@ -6,10 +7,11 @@ import { useCallback, useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import { jwtDecode } from "jwt-decode";
 
+
 export default function AuthProvider({ children }) {
   const [accessToken, setAccessToken] = useState(null);
-  const [user, setUser] = useState(null);
   const [isAuthenticating, setIsAuthenticating] = useState(false);
+  const [user, setUser] = useState(null);
   const [bookingForm, setBookingForm] = useState(() => {
     const persistedState = localStorage.getItem("laundryBookingForm");
     return persistedState ? JSON.parse(persistedState) : null;
@@ -39,7 +41,7 @@ export default function AuthProvider({ children }) {
     let needsRefresh = false;
 
     if (!accessToken) {
-      refreshAccessToken();
+      refreshTokenAction();
       return;
     }
 
@@ -55,12 +57,13 @@ export default function AuthProvider({ children }) {
     } catch {
       needsRefresh = true;
     }
+
     if (needsRefresh) {
       refreshTokenAction();
       return;
     }
 
-    //if token is valid & not expiring soon, fetch user
+    //If token is valid and not expiring soon, fetch user
     setIsAuthenticating(true);
     async function fetchUser() {
       try {
@@ -76,10 +79,12 @@ export default function AuthProvider({ children }) {
         setIsAuthenticating(false);
       }
     }
-
     fetchUser();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [accessToken]);
+
+
+
 
   //refresh accessToken
   // const refresh = useQuery({
@@ -89,7 +94,9 @@ export default function AuthProvider({ children }) {
   //     if (res.status === 200) {
   //       setAccessToken(res.data.data);
   //     } else {
-  //       setAccessToken(null);
+  //       {
+  //         setAccessToken(null);
+  //       }
   //     }
   //     return res;
   //   },
@@ -97,7 +104,7 @@ export default function AuthProvider({ children }) {
   //   retry: false,
   // });
 
-  // //fetch auth user
+  //fetch auth user
   // const { isPending } = useQuery({
   //   queryKey: ["auth_user", accessToken],
   //   queryFn: async () => {
@@ -109,20 +116,20 @@ export default function AuthProvider({ children }) {
   //     }
   //     return res;
   //   },
-  //   enabled: !!accessToken, //run only when there is an accesstoken
+    //enabled: !!accessToken, //run only when there is an accesstoken
   // });
 
   const mutation = useMutation({
     mutationFn: logoutUser,
     onSuccess: (res) => {
-      toast.success(res?.data?.message || "Logout successfull");
+      toast.success(res?.data?.message || "Logout Successful");
       queryClient.clear();
       setAccessToken(null);
       setUser(null);
     },
     onError: (err) => {
       import.meta.env.DEV && console.error(err);
-      toast.error(err?.response?.data?.message || "Something went wrong");
+      toast.error(err?.response?.data?.messsage || "Something went wrong");
     },
   });
 

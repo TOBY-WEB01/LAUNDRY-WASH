@@ -51,6 +51,6 @@ export const authorizedRoles = (...roles) => {
         )
       );
     }
-    next() //carry on with the task
+    next(); //carry on with the task
   };
 };

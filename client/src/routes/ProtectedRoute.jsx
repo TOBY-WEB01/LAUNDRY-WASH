@@ -19,7 +19,7 @@ export function PublicRoute({ children, accessToken }) {
 export function PrivateRoute({ children, accessToken }) {
   const location = useLocation();
   const navigate = useNavigate();
-  const from = location.state?.from || "/login";
+  const from = location.state?.from || "/auth/login";
 
   useEffect(() => {
     if (!accessToken) {

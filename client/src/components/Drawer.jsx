@@ -83,7 +83,7 @@ export default function Drawer({ handleLogout }) {
                 <Link to="/signup" className="font-medium text-xl">
                   Sign Up
                 </Link>
-                <Link to="/login" className="font-medium text-xl">
+                <Link to="/auth/login" className="font-medium text-xl">
                   Login
                 </Link>
               </div>
