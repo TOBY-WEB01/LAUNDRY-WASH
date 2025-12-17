@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "cloudinary": "^2.8.0",
+    "uninstall": "^0.0.0"
+  }
+}
