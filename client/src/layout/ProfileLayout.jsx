@@ -2,6 +2,7 @@ import { NavLink, Outlet } from "react-router";
 import { profileLinks } from "@/utils/Constant";
 import Logout from "@/components/Logout";
 import UploadAvatar from "@/pages /profile/UploadAvatar";
+import Footer from "@/components/Footer";
 
 export default function ProfileLayout() {
   return (
@@ -33,6 +34,7 @@ export default function ProfileLayout() {
             <Outlet />
           </div>
         </div>
+        <Footer/>
       </div>
     </>
   );

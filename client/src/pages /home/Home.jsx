@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import { useAuth } from "@/hooks/useAuth";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   const { user } = useAuth();
@@ -7,7 +8,7 @@ export default function Home() {
     <section className=" overflow-x-hidden px-2">
       <div className="container  mx-auto ">
         <div >
-          <h1 className="text-center text-white text-4xl pt-20 md:pt-30">
+          <h1 className="text-center text-white text-4xl pt-30 md:pt-30">
             Quick.Clean.Delivered.
           </h1>
           <p className="text-center mx-auto  text-white mt-3 w-[340px] md:w-[640px] ">
@@ -37,8 +38,8 @@ export default function Home() {
       </div>
       <section className= "bg-[#262626] py-10 px-2">
         <div className="container mx-auto">
-          <div className="md:flex pb-12  md:px-5 lg:px-0 ">
-            <div className="w-30 lg:w-30 md:w-60  pb-3 ">
+          <div className="md:flex  pb-12  md:px-5 lg:px-0 ">
+            <div className="w-30  lg:w-30 md:w-60  pb-3  ">
               <h4 className="text-white border-0 text-center rounded-4xl  bg-(--purple)    ">
                 Services
               </h4>
@@ -277,13 +278,16 @@ export default function Home() {
           </section>
         </div>
       </section>
+      <div className="bg-[#262626] ">
+
+     
       <section className="md:flex gap-10">
         <div>
           <img src="./Rectangle 10.png" alt=""  className="w-[900px]"/>
         </div>
         <div className="my-auto">
           <div className="lg:mr-70 md:mr-30 mb-8">
-            <h1 className="text-white text-5xl py-4 md:text-3xl font-semibold">
+            <h1 className="text-white text-3xl lg:text-5xl py-4 md:text-3xl font-semibold">
               Laundry Made Effortless
             </h1>
             <p className="text-white">
@@ -299,6 +303,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <Footer/>
+       </div>
     </section>
   );
 }

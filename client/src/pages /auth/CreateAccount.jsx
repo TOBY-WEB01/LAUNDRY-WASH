@@ -50,9 +50,9 @@ export default function CreateAccount() {
               <p className="text-white">Fullname</p>
               <input
                 type="text"
-                placeholder="Full Name"
+                placeholder="John Doe"
                 {...register("fullname")}
-                className="input input-md w-full border  py-2 px-3 rounded-xl  bg-white"
+                className="input input-md w-full border  py-2 px-3 rounded-xl  bg-white text-black"
               />
             </label>
             {errors.fullname && (
@@ -64,9 +64,9 @@ export default function CreateAccount() {
               <p className="text-white">Email</p>
               <input
                 type="email"
-                placeholder="Email"
+                placeholder="Johndoe@email.com"
                 {...register("email")}
-                className="input input-md w-full border  py-3 px-3 rounded-xl  bg-white"
+                className="input input-md w-full border  py-3 px-3 rounded-xl  bg-white text-black"
               />
             </label>
             {errors.email && (
@@ -80,7 +80,7 @@ export default function CreateAccount() {
                 type="tell"
                 placeholder="Tel..."
                 {...register("phone")}
-                className="input input-md w-full border  py-3 px-3 rounded-xl  bg-white"
+                className="input input-md w-full border  py-3 px-3 rounded-xl  bg-white text-black"
               />
             </label>
             {errors.phone && (
@@ -94,7 +94,7 @@ export default function CreateAccount() {
                 type="password"
                 placeholder="Enter your password here"
                 {...register("password")}
-                className="input input-md w-full border py-3 rounded-xl px-3 bg-white"
+                className="input input-md w-full border py-3 rounded-xl px-3 bg-white text-black"
               />
             </label>
             {errors.password && (
@@ -104,7 +104,7 @@ export default function CreateAccount() {
           </div>
 
           <button
-            className="btn btn-accent border-0  bg-(--purple) rounded-3xl  py-3 w-full mt-12"
+            className="btn btn-accent text-white border-0  bg-(--purple) rounded-3xl  py-3 w-full mt-12"
             disabled={mutation.isPending}
             type="submit"
           >

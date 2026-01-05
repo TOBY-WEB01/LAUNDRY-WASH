@@ -51,7 +51,7 @@ export default function ResetPassword() {
             type="password"
             placeholder="Enter your password here"
             {...register("newPassword")}
-            className="input input-md w-full border py-3 rounded-xl px-3 bg-white"
+            className="input input-md w-full border py-3 rounded-xl px-3 bg-white text-black"
           />
           {errors.password && (
             <p className="text-red-500 text-sm">
@@ -71,7 +71,7 @@ export default function ResetPassword() {
               type="password"
               placeholder="Enter your password here"
               {...register("confirmPassword")}
-              className="input input-md w-full border py-3 rounded-xl px-3 bg-white"
+              className="input input-md w-full border py-3 rounded-xl px-3 bg-white text-black"
             />
             {errors.password && (
               <p className="text-red-500 text-sm">{errors.password?.message}</p>

@@ -68,6 +68,9 @@ export default function Drawer({ handleLogout }) {
                       </NavLink>
                     )}
                   </div>
+                  <div className="text-xl">
+                    <Link to="/admin">Admin</Link>
+                  </div>
                   <a
                     href="#"
                     onClick={handleLogout}

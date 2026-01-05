@@ -44,7 +44,7 @@ export default function ForgotPassword() {
               <p className="text-white">Email</p>
               <input
                 type="email"
-                placeholder="Email"
+                placeholder="Johndoe@email.com"
                 {...register("email")}
                 className="input input-md w-full border text-black py-3 px-3 rounded-xl  bg-white"
               />

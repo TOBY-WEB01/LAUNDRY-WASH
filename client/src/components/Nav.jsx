@@ -9,7 +9,7 @@ export default function Nav() {
 
   return (
     <div className="w-full  fixed z-10 top-0 bg-[#262626] md:px-8">
-      <div className="container  mx-auto  flex  items-center justify-between  gap-20 md:gap-5  py-2 px-2.5 md:px-0 lg:py-4">
+      <div className="container  mx-auto  flex  items-center md:justify-between gap-20 md:gap-5  py-2 px-2.5 md:px-0 lg:py-4">
         <div className="">
           <Link>
             <Logo />
@@ -30,27 +30,29 @@ export default function Nav() {
             </NavLink>
           ) : null}
         </div>
-        <div className="hidden md:block">
-          {user ? (
-            <UserAvatar />
-          ) : (
-            <div className="hidden md:block flex gap-4   md:gap-0  md:space-x-3   ">
-              <Link
-                to="/auth/createAccount"
-                className="text-white border-0 rounded-3xl  md:px-6 md:py-2 bg-(--purple)"
-              >
-                Sign Up
-              </Link>
-              <Link
-                to="/auth/login"
-                className="text-(--purple) border rounded-3xl md:px-6 md:py-2"
-              >
-                Log In
-              </Link>
-            </div>
-          )}
+        <div className="flex items-center justify-between gap-4">
+          <div className="  lg:block">
+            {user ? (
+              <UserAvatar />
+            ) : (
+              <div className="hidden  md:flex gap-4   md:gap-0  md:space-x-3   ">
+                <Link
+                  to="/auth/createAccount"
+                  className="text-white border-0 rounded-3xl  md:px-6 md:py-2 bg-(--purple)"
+                >
+                  Sign Up
+                </Link>
+                <Link
+                  to="/auth/login"
+                  className="text-(--purple) border rounded-3xl md:px-6 md:py-2"
+                >
+                  Log In
+                </Link>
+              </div>
+            )}
+          </div>
+          <Drawer />
         </div>
-        <Drawer />
       </div>
     </div>
   );

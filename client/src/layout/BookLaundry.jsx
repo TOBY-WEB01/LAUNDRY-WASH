@@ -1,3 +1,4 @@
+import Footer from '@/components/Footer'
 import Nav from '@/components/Nav'
 import React from 'react'
 import { Outlet } from 'react-router'
@@ -8,6 +9,7 @@ export default function BookLaundry() {
      
     <Nav/>
        <Outlet/>
+       <Footer/>
     </>
   )
 }
