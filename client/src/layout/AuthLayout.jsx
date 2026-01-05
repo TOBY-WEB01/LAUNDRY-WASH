@@ -3,9 +3,9 @@ import { Link, Outlet } from "react-router";
 
 export default function AuthLayout() {
   return (
-    <section className="grid grid-cols-12 items-center justify-center min-h-screen">
+    <section className="grid grid-cols-12 items-center justify-center min-h-screen auth-background auth-layout">
       <div
-        className="hidden md:block col-span-6 h-full  "
+        className="hidden md:block col-span-6 h-full "
         style={{ backgroundImage: "url('/image 9.png')" }}
       >
         <div className="flex flex-col h-full justify-between py-4 px-6">
@@ -18,7 +18,7 @@ export default function AuthLayout() {
           <div className="backdrop-blur-xs bg-white/0 border border-white/30 rounded-xl py-6 px-6 hidden lg:flex items-center gap-5">
             <div className="flex w-[24%] text-white">
               <div className="flex items-center gap-2">
-                {/* <img src="" alt="" /> */}
+                <img src="/Ellipse 5.png" alt="" />
                 <div className="flex flex-col text-xs space-y-1">
                   <p className="font-semibold">Zoe Saldana</p>
                   <p>Galazy Guardian</p>

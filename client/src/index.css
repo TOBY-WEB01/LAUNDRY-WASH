@@ -126,6 +126,21 @@ body {
   }
 }
 
+.auth-background {
+  background-image: url("/image 9.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .auth-layout {
+    background-image: none;
+  }
+}
+
 /* .hero {
   background-image: url("/client/public/image\ 9.png");
   background-size: cover;
