@@ -1,6 +1,8 @@
 import { useLocation, useNavigate, useSearchParams } from "react-router";
 import UserAvatar from "./UserAvatar";
+import AdminDrawer from "./AdminDrawer";
 import { useDebouncedCallback } from "use-debounce";
+
 
 export default function AdminNav() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -24,9 +26,9 @@ export default function AdminNav() {
   }, 500);
 
   return (
-    <div className="sticky top-0 w-full bg-(--darkgrey) p-4 z-30">
-      <div className="container mx-auto flex items-center justify-between">
-        <label className="input bg-zinc-800">
+    <div className="sticky top-0 w-full  bg-(--darkgrey) p-4 z-30">
+      <div className="container text-white mx-auto flex gap-4 items-center justify-between">
+        <label className="input bg-zinc-800 border rounded-sm ">
           <svg
             className="h-[1em] opacity-50"
             xmlns="http://www.w3.org/2000/svg"
@@ -53,6 +55,7 @@ export default function AdminNav() {
           />
         </label>
         <UserAvatar />
+        <AdminDrawer/>
       </div>
     </div>
   );

@@ -52,11 +52,11 @@ export default function AdminOrders() {
         </div>
       ) : (
         <div>
-          <div className="mt-10 grid md:grid-cols-12 gap-8 ">
+          <div className="mt-10 grid md:grid-cols-12 gap-8 text-white">
             <div className="lg:col-span-3 md:col-span-6 border-0 px-3 rounded-3xl bg-[#897527]">
               <div className="flex  gap-3 items-center pt-4">
                 <div className="border w-14 h-14 p-2 rounded-full bg-white">
-                  <img src="/public/cart.png" alt="" className="w-full " />
+                  <img src="/cart.png" alt="" className="w-full " />
                 </div>
                 <div>
                   <h1 className="text-2xl">Active </h1>
@@ -69,7 +69,7 @@ export default function AdminOrders() {
             <div className="lg:col-span-3 md:col-span-6  border-0 px-3 rounded-3xl bg-[#7C4191]">
               <div className="flex  gap-3 items-center pt-4">
                 <div className="border w-14 h-14 p-2 rounded-full bg-white">
-                  <img src="/public/users.png" alt="" className="w-full " />
+                  <img src="/users.png" alt="" className="w-full " />
                 </div>
                 <div>
                   <h1 className="text-2xl">In Progress </h1>
@@ -82,7 +82,7 @@ export default function AdminOrders() {
             <div className="lg:col-span-3 md:col-span-6  border-0 px-3 rounded-3xl bg-[#43868A]">
               <div className="flex  gap-3 items-center pt-4">
                 <div className="border w-14 h-14 p-2 rounded-full bg-white">
-                  <img src="/public/banknote.png" alt="" className="w-full " />
+                  <img src="/banknote.png" alt="" className="w-full " />
                 </div>
                 <div>
                   <h1 className="text-2xl">Completed </h1>
@@ -95,7 +95,7 @@ export default function AdminOrders() {
             <div className="lg:col-span-3 md:col-span-6  border-0 px-3 rounded-3xl bg-red-500">
               <div className="flex  gap-3 items-center pt-4">
                 <div className="border w-14 h-14 p-2 rounded-full bg-white">
-                  <img src="/public/banknote.png" alt="" className="w-full " />
+                  <img src="/banknote.png" alt="" className="w-full " />
                 </div>
                 <div>
                   <h1 className="text-2xl">Canceled </h1>

@@ -23,17 +23,17 @@ const {user, handleLogout}=useAuth()
                 )}
               </div>
             </div>
-            <div className="hidden md:block dropdown dropdown-end ">
+            <div className="hidden  md:block dropdown dropdown-end ">
               <div
                 tabIndex={0}
                 role="button"
-                className="btn btn-ghost capitalize p-1 text-white"
+                className="btn btn-ghost capitalize  p-1 text-white"
               >
                 {user?.fullname} <ChevronDown />
               </div>
               <ul
                 tabIndex="-1"
-                className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
+                className="dropdown-content menu bg-(--darkgrey) rounded-box z-1 w-52 p-2 shadow-sm  text-white"
               >
                 <li>
                   <Link to="/profile">

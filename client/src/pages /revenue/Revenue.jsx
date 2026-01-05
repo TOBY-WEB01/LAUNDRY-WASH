@@ -35,7 +35,7 @@ export default function Revenue() {
       hasMore: pagination?.hasMore || false,
       currentPage: pagination?.page || 1,
     });
-  return ( <div className=" container mx-auto px-6">
+  return ( <div className=" container mx-auto text-white px-6">
         <div className="">
           <h1 className="text-3xl mt-6">Dashboard</h1>
         </div>
@@ -69,7 +69,7 @@ export default function Revenue() {
               <div className="lg:col-span-3 md:col-span-6  border-0 px-3 rounded-3xl bg-[#7C4191]">
                 <div className="flex  gap-3 items-center pt-4">
                   <div className="border w-14 h-14 p-2 rounded-full bg-white">
-                    <img src="/public/users.png" alt="" className="w-full " />
+                    <img src="/users.png" alt="" className="w-full " />
                   </div>
                   <div>
                     <h1 className="text-2xl">Total Revenue </h1>
@@ -82,7 +82,7 @@ export default function Revenue() {
               <div className="lg:col-span-3 md:col-span-6  border-0 px-3 rounded-3xl bg-[#43868A]">
                 <div className="flex  gap-3 items-center pt-4">
                   <div className="border w-14 h-14 p-2 rounded-full bg-white">
-                    <img src="/public/banknote.png" alt="" className="w-full " />
+                    <img src="/banknote.png" alt="" className="w-full " />
                   </div>
                   <div>
                     <h1 className="text-2xl">Pay on Delivery</h1>
@@ -95,7 +95,7 @@ export default function Revenue() {
               <div className="lg:col-span-3 md:col-span-6  border-0 px-3 rounded-3xl bg-red-500">
                 <div className="flex  gap-3 items-center pt-4">
                   <div className="border w-14 h-14 p-2 rounded-full bg-white">
-                    <img src="/public/banknote.png" alt="" className="w-full " />
+                    <img src="/banknote.png" alt="" className="w-full " />
                   </div>
                   <div>
                     <h1 className="text-2xl">Canceled </h1>

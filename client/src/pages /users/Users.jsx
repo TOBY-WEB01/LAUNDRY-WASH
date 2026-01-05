@@ -28,7 +28,7 @@ export default function Users() {
   });
 
   return (
-    <div className=" container mx-auto px-6">
+    <div className=" container mx-auto text-white px-6">
       <div className="">
         <h1 className="text-3xl mt-6">Users</h1>
       </div>
@@ -36,7 +36,7 @@ export default function Users() {
         <div className=" md:col-span-6 border-0 px-3 rounded-3xl bg-[#897527]">
           <div className="flex  gap-3 items-center pt-4">
             <div className="border w-14 h-14 p-2 rounded-full bg-white">
-              <img src="/public/users.png" alt="" className="w-full " />
+              <img src="/users.png" alt="" className="w-full " />
             </div>
             <div>
               <h1 className="text-2xl">Total Users</h1>
@@ -47,7 +47,7 @@ export default function Users() {
         <div className=" md:col-span-6  border-0 px-3 rounded-3xl bg-[#7C4191]">
           <div className="flex  gap-3 items-center pt-4">
             <div className="border w-14 h-14 p-2 rounded-full bg-white">
-              <img src="/public/users.png" alt="" className="w-full " />
+              <img src="/users.png" alt="" className="w-full " />
             </div>
             <div>
               <h1 className="text-2xl">Recent Users</h1>

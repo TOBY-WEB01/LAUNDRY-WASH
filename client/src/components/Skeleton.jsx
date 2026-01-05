@@ -1,7 +1,7 @@
 export function SkeletonTable() {
   return (
     <div className="overflow-x-auto">
-      <table className="table">
+      <table className="table ">
         <thead>
           <tr>
             <th>

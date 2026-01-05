@@ -9,7 +9,7 @@ export default function Sidebar() {
       <div className="p-4">
         <Logo className="text-lg" />
       </div>
-      <div className="h-[calc(100vh-150px)] p-4">
+      <div className="h-[calc(100vh-150px)] text-white p-4">
         {adminLinks.map((link) => (
           <NavLink
             key={link.id}

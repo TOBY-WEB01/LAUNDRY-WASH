@@ -39,7 +39,7 @@ export default function Orders() {
   // );
 
   return (
-    <div className="px-4">
+    <div className="px-4 ">
       <div role="tablist" className="tabs tabs-bordered">
         {tabs.map((tab) => (
           <button
@@ -55,7 +55,7 @@ export default function Orders() {
         ))}
       </div>
 
-      <div className="mt-8">
+      <div className="mt-8 ">
         {isPending ? (
           <SkeletonTable />
         ) : isError ? (

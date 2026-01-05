@@ -1,7 +1,7 @@
 export default function TableBody({ tableColumns, tableData, renderCell }) {
   return (
     <div className="overflow-x-auto">
-      <table className="table">
+      <table className="table text-white">
         <thead className="bg-(--darkgrey)">
           <tr>
             <th>#</th>
