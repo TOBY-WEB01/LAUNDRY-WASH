@@ -143,7 +143,7 @@ export default function PaymentOptions() {
           >
             <div classname="my-6 flex flex-col justify-center items-center">
               <img
-                src="/public/Check.png"
+                src="/Check.png"
                 alt="success"
                 className="w-[100px] mx-auto"
               />

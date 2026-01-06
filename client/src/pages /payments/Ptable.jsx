@@ -13,7 +13,7 @@ export default function Table({ filterPayments }) {
       case "paidAt":
         return (
           <p className="text-sm">
-            {new Date(payment?.paidAt).toLocaleDateString("en-GB", {
+            {new Date(payment?.createdAt).toLocaleDateString("en-GB", {
               day: "2-digit",
               month: "short",
               year: "numeric",
