@@ -5,7 +5,7 @@ import UserAvatar from "./UserAvatar";
 import Drawer from "./Drawer";
 
 export default function Nav() {
-  const { user } = useAuth();
+  const { user, handleLogout } = useAuth();
 
   return (
     <div className="w-full  fixed z-10 top-0 bg-[#262626] md:px-8">
@@ -51,7 +51,7 @@ export default function Nav() {
               </div>
             )}
           </div>
-          <Drawer />
+          <Drawer handleLogout={handleLogout } />
         </div>
       </div>
     </div>

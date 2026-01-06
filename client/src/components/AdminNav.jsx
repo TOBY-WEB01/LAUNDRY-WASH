@@ -2,11 +2,13 @@ import { useLocation, useNavigate, useSearchParams } from "react-router";
 import UserAvatar from "./UserAvatar";
 import AdminDrawer from "./AdminDrawer";
 import { useDebouncedCallback } from "use-debounce";
+import { useAuth } from "@/hooks/useAuth";
 
 
 export default function AdminNav() {
   const [searchParams, setSearchParams] = useSearchParams();
   const location = useLocation();
+  const {handleLogout} = useAuth()
   const navigate = useNavigate();
   const query = searchParams.get("query") || "";
 
@@ -55,7 +57,7 @@ export default function AdminNav() {
           />
         </label>
         <UserAvatar />
-        <AdminDrawer/>
+        <AdminDrawer handleLogout={handleLogout}/>
       </div>
     </div>
   );

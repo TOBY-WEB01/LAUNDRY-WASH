@@ -7,6 +7,7 @@ import { Suspense } from "react";
 import Profile from "@/pages /profile/Profile";
 import Payment from "@/pages /payments/Payment";
 import Revenue from "@/pages /revenue/Revenue";
+import ErrorBoundary from "@/components/ErrorBoundary";
 
 const AuthLayout = lazy(() => import("../layout/AuthLayout"));
 const Dashboard = lazy(() => import("../pages /dashboard/Dashboard"));
@@ -43,6 +44,7 @@ export default function AppRoutes() {
   const { accessToken } = useAuth();
   const routes = [
     {
+       errorElement: <ErrorBoundary />,
       element: (
         <Suspense fallback={<LazySpinner />}>
           <PublicRoute accessToken={accessToken}>
@@ -63,6 +65,7 @@ export default function AppRoutes() {
       ],
     },
     {
+       errorElement: <ErrorBoundary />,
       element: (
         <Suspense fallback={<LazySpinner />}>
           <PublicRoute accessToken={accessToken}>
@@ -84,6 +87,7 @@ export default function AppRoutes() {
     },
     {
       path: "verify-email/:userId/:verifyTokenLink",
+       errorElement: <ErrorBoundary />,
       element: (
         <Suspense fallback={<LazySpinner />}>
           <PrivateRoute accessToken={accessToken}>
@@ -94,6 +98,7 @@ export default function AppRoutes() {
     },
     {
       path: "verify-email",
+       errorElement: <ErrorBoundary />,
       element: (
         <Suspense fallback={<LazySpinner />}>
           <PrivateRoute accessToken={accessToken}>
@@ -103,6 +108,7 @@ export default function AppRoutes() {
       ),
     },
     {
+       errorElement: <ErrorBoundary />,
       element: (
         <Suspense fallback={<LazySpinner />}>
           <PrivateRoute accessToken={accessToken}>
@@ -113,6 +119,7 @@ export default function AppRoutes() {
       children: [
         {
           path: "book-laundry",
+           errorElement: <ErrorBoundary />,
           element: (
             <Suspense fallback={<LazySpinner />}>
               <PrivateRoute accessToken={accessToken}>
@@ -123,6 +130,7 @@ export default function AppRoutes() {
           children: [
             {
               path: "booking-summary",
+               errorElement: <ErrorBoundary />,
               element: (
                 <Suspense fallback={<LazySpinner />}>
                   <PrivateRoute accessToken={accessToken}>
@@ -133,6 +141,7 @@ export default function AppRoutes() {
             },
             {
               path: "payment-options/:bookingId",
+               errorElement: <ErrorBoundary />,
               element: (
                 <Suspense fallback={<LazySpinner />}>
                   <PrivateRoute accessToken={accessToken}>
@@ -148,6 +157,7 @@ export default function AppRoutes() {
 
     {
       path: "/",
+      errorElement: <ErrorBoundary />,
       element: (
         <Suspense fallback={<LazySpinner />}>
           <RootLayout />
@@ -161,6 +171,7 @@ export default function AppRoutes() {
         },
         {
           path: "profile",
+           errorElement: <ErrorBoundary />,
           element: (
             <Suspense fallback={<LazySpinner />}>
               <PrivateRoute accessToken={accessToken}>
@@ -171,6 +182,7 @@ export default function AppRoutes() {
           children: [
             {
               path: "orders",
+               errorElement: <ErrorBoundary />,
               element: (
                 <PrivateRoute accessToken={accessToken}>
                   <Orders />
@@ -187,6 +199,7 @@ export default function AppRoutes() {
             },
             {
               path: "payments",
+               errorElement: <ErrorBoundary />,
               element: (
                 <PrivateRoute accessToken={accessToken}>
                   <Payment />
@@ -199,6 +212,7 @@ export default function AppRoutes() {
     },
     {
       path: "admin",
+       errorElement: <ErrorBoundary />,
       element: (
         <Suspense fallback={<LazySpinner />}>
           <PrivateRoute accessToken={accessToken}>
@@ -219,6 +233,7 @@ export default function AppRoutes() {
         },
         {
           path: "users",
+           errorElement: <ErrorBoundary />,
           element: (
             <Suspense fallback={<LazySpinner />}>
               <PrivateRoute accessToken={accessToken}>
@@ -229,6 +244,7 @@ export default function AppRoutes() {
         },
         {
           path: "orders",
+           errorElement: <ErrorBoundary />,
           element: (
             <Suspense fallback={<LazySpinner />}>
               <PrivateRoute accessToken={accessToken}>
@@ -239,6 +255,7 @@ export default function AppRoutes() {
         },
         {
           path: "revenue",
+           errorElement: <ErrorBoundary />,
           element: (
             <Suspense fallback={<LazySpinner />}>
               <PrivateRoute accessToken={accessToken}>
