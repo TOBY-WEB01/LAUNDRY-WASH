@@ -83,7 +83,7 @@ export default function Drawer({ handleLogout }) {
             ) : (
               <div className="flex flex-col mt-10 gap-4 text-white ">
                 {" "}
-                <Link to="/signup" className="font-medium text-xl">
+                <Link to="/auth/signup" className="font-medium text-xl">
                   Sign Up
                 </Link>
                 <Link to="/auth/login" className="font-medium text-xl">
