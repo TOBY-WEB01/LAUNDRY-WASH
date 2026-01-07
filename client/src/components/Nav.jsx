@@ -9,7 +9,7 @@ export default function Nav() {
 
   return (
     <div className="w-full  fixed z-10 top-0 bg-[#262626] md:px-8">
-      <div className="container  mx-auto  flex  items-center md:justify-between gap-20 md:gap-5  py-2 px-2.5 md:px-0 lg:py-4">
+      <div className="container  mx-auto  flex  items-center justify-between gap-20 md:gap-5  py-2 px-2.5 md:px-0 lg:py-4">
         <div className="">
           <Link>
             <Logo />
@@ -30,7 +30,7 @@ export default function Nav() {
             </NavLink>
           ) : null}
         </div>
-        <div className="flex items-center justify-between gap-4">
+        <div className="flex items-center  justify-between gap-2">
           <div className="  lg:block">
             {user ? (
               <UserAvatar />
@@ -51,7 +51,7 @@ export default function Nav() {
               </div>
             )}
           </div>
-          <Drawer handleLogout={handleLogout } />
+          <Drawer handleLogout={handleLogout} />
         </div>
       </div>
     </div>

@@ -6,8 +6,11 @@ import { useForm } from "react-hook-form";
 import { Link} from "react-router";
 import { useMutation } from "@tanstack/react-query";
 import { useAuth } from "@/hooks/useAuth";
+import { useState } from "react";
+import { Eye, EyeOff } from "lucide-react";
 
 export default function CreateAccount() {
+    const [revealPassword, setRevealPassword] = useState(false);
   const {
     handleSubmit,
     register,
@@ -16,6 +19,12 @@ export default function CreateAccount() {
     resolver: zodResolver(validateRegisterUserSchema),
   });
   const { setAccessToken } = useAuth();
+
+    const togglePasswordReveal = (e) => {
+    e.preventDefault();
+    setRevealPassword((prev) => !prev);
+  };
+
 
 
   const mutation = useMutation({
@@ -91,11 +100,18 @@ export default function CreateAccount() {
             <label className="floating-label">
               <p  className="text-white ">Password</p>
               <input
-                type="password"
+                  type={revealPassword ? "text" : "password"}
                 placeholder="Enter your password here"
                 {...register("password")}
                 className="input input-md w-full border py-3 rounded-xl px-3 bg-white text-black"
               />
+              <button
+                type="button"
+                onClick={togglePasswordReveal}
+                className="absolute right-3 top-1/2 translate-y-1 text-gray-600 z-10"
+              >
+                {revealPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+              </button>
             </label>
             {errors.password && (
               <p className="text-red-500 text-sm">{errors?.password.message}</p>

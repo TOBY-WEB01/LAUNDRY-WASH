@@ -180,7 +180,7 @@ export default function Home() {
             </p>
           </div>
           <div className="col-span-6">
-            <img src="./Rectangle 1.png" alt="" className="w-[500px]" />
+            <img src="./Rectangle 1.png" alt="" className="w-[600px]" />
           </div>
         </div>
         <div>
@@ -281,21 +281,21 @@ export default function Home() {
       <div className="bg-[#262626] ">
 
      
-      <section className="md:flex gap-10">
+      <section className="md:flex gap-10 ">
         <div>
           <img src="./Rectangle 10.png" alt=""  className="w-[900px]"/>
         </div>
         <div className="my-auto">
           <div className="lg:mr-70 md:mr-30 mb-8">
-            <h1 className="text-white text-3xl lg:text-5xl py-4 md:text-3xl font-semibold">
+            <h1 className="text-white text-center md:text-start text-3xl lg:text-5xl py-4 md:text-3xl font-semibold">
               Laundry Made Effortless
             </h1>
-            <p className="text-white">
+            <p className="text-white text-center md:text-start px-1">
               Fresh, clean, perfectly folded—right when you need it.
             </p>
           </div>
-          <div className=" flex justify-center ">
-            <Link  to="/book-laundry" > <h1 className="text-white border-0 w-90 lg:w-125 md:w-100 text-center rounded-4xl  bg-(--purple) py-4  ">
+          <div className=" flex justify-center">
+            <Link  to="/book-laundry" > <h1 className="text-white border-0 w-90 lg:w-140 md:w-100 text-center rounded-4xl  bg-(--purple) py-4  ">
               Book Laundry
             </h1>
             </Link>

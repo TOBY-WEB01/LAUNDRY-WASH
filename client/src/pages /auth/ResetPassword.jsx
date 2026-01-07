@@ -4,11 +4,13 @@ import { zodResolver } from "@hookform/resolvers/zod";
 
 import { toast } from "react-toastify";
 import { Link, useNavigate, useSearchParams } from "react-router";
-import { Loader } from "lucide-react";
+import { Eye, EyeOff, Loader } from "lucide-react";
 import { resetPassword } from "@/api/auth";
 import { validateResetPasswordSchema } from "@/utils/dataSchema";
+import { useState } from "react";
 
 export default function ResetPassword() {
+  const [revealPassword, setRevealPassword] = useState(false);
   const {
     handleSubmit,
     register,
@@ -16,6 +18,11 @@ export default function ResetPassword() {
   } = useForm({
     resolver: zodResolver(validateResetPasswordSchema),
   });
+
+   const togglePasswordReveal = (e) => {
+    e.preventDefault();
+    setRevealPassword((prev) => !prev);
+  };
 
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
@@ -48,11 +55,18 @@ export default function ResetPassword() {
         <label className="floating-label">
           <span className="text-white ">Password</span>
           <input
-            type="password"
+            type={revealPassword ? "text" : "password"}
             placeholder="Enter your password here"
             {...register("newPassword")}
             className="input input-md w-full border py-3 rounded-xl px-3 bg-white text-black"
           />
+          <button
+                type="button"
+                onClick={togglePasswordReveal}
+                className="absolute right-3 top-1/2 translate-y-1 text-gray-600 z-10"
+              >
+                {revealPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+              </button>
           {errors.password && (
             <p className="text-red-500 text-sm">
               {errors.newPassword?.message}
@@ -68,11 +82,18 @@ export default function ResetPassword() {
           <label className="floating-label">
             <span className="text-white ">Confirm Password</span>
             <input
-              type="password"
+              type={revealPassword ? "text" : "password"}
               placeholder="Enter your password here"
               {...register("confirmPassword")}
               className="input input-md w-full border py-3 rounded-xl px-3 bg-white text-black"
             />
+            <button
+                type="button"
+                onClick={togglePasswordReveal}
+                className="absolute right-3 top-1/2 translate-y-1 text-gray-600 z-10"
+              >
+                {revealPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+              </button>
             {errors.password && (
               <p className="text-red-500 text-sm">{errors.password?.message}</p>
             )}

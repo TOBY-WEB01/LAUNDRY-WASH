@@ -10,7 +10,7 @@ export default function Drawer({ handleLogout}) {
   const { user } = useAuth();
   return (
     <>
-      <Menu onClick={() => setIsOpen(true)} className="lg:hidden text-white" />
+      <Menu onClick={() => setIsOpen(true)} className="md:hidden text-white" />
       <div
         className={`drawer fixed top-0 bg-(--darkgrey) left-0 z-40 ${
           isOpen ? "drawer-open" : ""

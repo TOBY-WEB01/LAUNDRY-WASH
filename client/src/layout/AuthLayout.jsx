@@ -3,9 +3,9 @@ import { Link, Outlet } from "react-router";
 
 export default function AuthLayout() {
   return (
-    <section className="grid grid-cols-12 items-center justify-center min-h-screen auth-background auth-layout">
+    <section className="lg:grid  grid-cols-12 items-center justify-center min-h-screen auth-background auth-layout">
       <div
-        className="hidden md:block col-span-6 h-full "
+        className="col-span-6 h-full "
         style={{ backgroundImage: "url('/image 9.png')" }}
       >
         <div className="flex flex-col h-full justify-between py-4 px-6">

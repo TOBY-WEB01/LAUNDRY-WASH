@@ -3,14 +3,16 @@ import { validateLoginUserSchema } from "../../utils/dataSchema";
 
 import { toast } from "react-toastify";
 import { useForm } from "react-hook-form";
-import { Link,  } from "react-router";
+import { Link } from "react-router";
 // import { useAuth } from "../../hooks/useAuth";
 import { loginUser } from "@/api/auth";
 import { useMutation } from "@tanstack/react-query";
 import { useAuth } from "@/hooks/useAuth";
-import { Loader, Eye, EyeClosed } from "lucide-react";
+import { Loader, Eye, EyeClosed, EyeOff } from "lucide-react";
+import { useState } from "react";
 
 export default function Login() {
+  const [revealPassword, setRevealPassword] = useState(false);
   //  const navigate = useNavigate;
   const {
     handleSubmit,
@@ -20,6 +22,12 @@ export default function Login() {
     resolver: zodResolver(validateLoginUserSchema),
   });
   const { setAccessToken, user } = useAuth();
+
+  const togglePasswordReveal = (e) => {
+    e.preventDefault();
+    setRevealPassword((prev) => !prev);
+  };
+
   const navigate = useMutation();
 
   const mutation = useMutation({
@@ -64,11 +72,18 @@ export default function Login() {
             <label className="floating-label">
               <p className="text-white ">Password</p>
               <input
-                type="password"
+                type={revealPassword ? "text" : "password"}
                 placeholder="Enter your password here"
                 {...register("password")}
                 className="input input-md w-full border py-3 rounded-xl px-3 bg-white text-black"
               />
+              <button
+                type="button"
+                onClick={togglePasswordReveal}
+                className="absolute right-3 top-1/2 translate-y-1 text-gray-600 z-10"
+              >
+                {revealPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+              </button>
               {errors.password && (
                 <p className="text-red-500 text-sm">
                   {errors?.password.message}
@@ -79,7 +94,6 @@ export default function Login() {
             <div className="text-end text-white text-sm mt-2">
               <Link to="/auth/forgotPassword">Forgot Password?</Link>
             </div>
-
           </div>
 
           <button
