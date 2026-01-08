@@ -44,9 +44,10 @@ export default function Drawer({ handleLogout }) {
             </button>
             {user ? (
               <div className="mt-8 text-white">
-                <h1 className="font-semibold  text-xl capitalize">
+                <h1 className="font-semibold  text-2xl capitalize">
                   Hi, {user.fullname}
                 </h1>
+                <div className="divider"></div>
                 <div className="mt-4 flex flex-col gap-3">
                   <NavLink
                     to="/admin"

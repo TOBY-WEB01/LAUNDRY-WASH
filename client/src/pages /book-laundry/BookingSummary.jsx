@@ -175,7 +175,7 @@ export default function BookingSummary() {
           <div>
             <button
               type="submit"
-              className="border-0  text-white py-2 px-31 md:px-28 lg:px-29  rounded-3xl bg-(--purple)"
+              className="btn border-0 text-white py-2 px-31 md:px-28 lg:px-29  rounded-3xl bg-(--purple)"
               onClick={placeOrder}
               disabled={mutation.isPending}
             >

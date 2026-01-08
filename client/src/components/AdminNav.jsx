@@ -4,11 +4,10 @@ import AdminDrawer from "./AdminDrawer";
 import { useDebouncedCallback } from "use-debounce";
 import { useAuth } from "@/hooks/useAuth";
 
-
 export default function AdminNav() {
   const [searchParams, setSearchParams] = useSearchParams();
   const location = useLocation();
-  const {handleLogout} = useAuth()
+  const { handleLogout } = useAuth();
   const navigate = useNavigate();
   const query = searchParams.get("query") || "";
 
@@ -56,8 +55,10 @@ export default function AdminNav() {
             onChange={debounceFn}
           />
         </label>
-        <UserAvatar />
-        <AdminDrawer handleLogout={handleLogout}/>
+        <div className="flex gap-6 items-center">
+          <UserAvatar />
+          <AdminDrawer handleLogout={handleLogout} />
+        </div>
       </div>
     </div>
   );

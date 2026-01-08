@@ -5,9 +5,14 @@ import { useAuth } from "../hooks/useAuth";
 import Logo from "./Logo";
 import { NavLink } from "react-router";
 
-export default function Drawer({ handleLogout}) {
+export default function Drawer({ handleLogout }) {
   const [isOpen, setIsOpen] = useState(false);
   const { user } = useAuth();
+
+  const closeAction = () => {
+    handleLogout();
+    setIsOpen(false);
+  };
   return (
     <>
       <Menu onClick={() => setIsOpen(true)} className="md:hidden text-white" />
@@ -73,7 +78,7 @@ export default function Drawer({ handleLogout}) {
                   </div>
                   <a
                     href="#"
-                    onClick={handleLogout}
+                    onClick={closeAction}
                     className="font-medium text-xl text-white mt-5"
                   >
                     Logout
@@ -83,10 +88,18 @@ export default function Drawer({ handleLogout}) {
             ) : (
               <div className="flex flex-col mt-10 gap-4 text-white ">
                 {" "}
-                <Link to="/auth/createAccount" className="font-medium text-xl">
+                <Link
+                  to="/auth/createAccount"
+                  className="font-medium text-xl"
+                  onClick={() => setIsOpen(false)}
+                >
                   Sign Up
                 </Link>
-                <Link to="/auth/login" className="font-medium text-xl">
+                <Link
+                  to="/auth/login"
+                  className="font-medium text-xl"
+                  onClick={() => setIsOpen(false)}
+                >
                   Login
                 </Link>
               </div>

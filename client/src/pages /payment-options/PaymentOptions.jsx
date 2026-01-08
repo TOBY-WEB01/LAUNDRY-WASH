@@ -30,7 +30,7 @@ export default function PaymentOptions() {
       setIsModalOpen(true);
     },
     onError: (error) => {
-       import.meta.env.DEV && console.error(error);
+      import.meta.env.DEV && console.error(error);
       toast.error(
         error?.response?.data?.message ||
           error?.response?.data ||
@@ -109,13 +109,11 @@ export default function PaymentOptions() {
             <button
               onClick={makePayment}
               disabled={mutation.isPending}
-              className="border-0  text-white py-2 px-36 md:px-17 lg:px-15  rounded-3xl bg-(--purple)"
+              className="btn border-0  text-white py-2 px-36 md:px-17 lg:px-15  rounded-3xl bg-(--purple)"
             >
-              {" "}
               {mutation.isPending ? (
                 <>
-                  {" "}
-                  <Loader className="animate-spin mr-2 " /> Proceed{" "}
+                  <Loader className="animate-spin mr-2" /> Proceed{" "}
                 </>
               ) : (
                 "Proceed"
@@ -156,10 +154,10 @@ export default function PaymentOptions() {
                 <p className="text-white">
                   You will be notified once dispatch is on its way
                 </p>
-                <div className="mt-6 grid grid-cols-1 gap-2 md:gap-4">
+                <div className="mt-6 grid grid-cols-1 gap-4">
                   <button
                     type="submit"
-                    className="btn btn-lg  text-white w-full rounded-full border border-white bg-(--purple)"
+                    className="btn btn-lg  text-white w-full rounded-full bg-(--purple)"
                     onClick={() =>
                       navigate("/profile/orders?status=in-progress")
                     }
@@ -168,7 +166,7 @@ export default function PaymentOptions() {
                   </button>
                   <button
                     onClick={() => navigate("/")}
-                    className="btn btn-lg bg-transparent  text-white w-full rounded-full border-0"
+                    className="btn btn-lg border border-white bg-transparent  text-white w-full rounded-full"
                   >
                     Back to home
                   </button>
