@@ -158,7 +158,7 @@ export default function BookingSummary() {
             <div className="border rounded-2xl bg-white mt-3 pt-2 pb-2 space-y-2">
               <div className="flex justify-between px-2  item-center gap-56 md:gap-130 ">
                 <p className="text-sm text-black">Total Price</p>
-                <h1 className="text-black">{bookingForm?.total}</h1>
+                <h1 className="text-black">&#x20A6; {bookingForm?.total}</h1>
               </div>
             </div>
           </div>
