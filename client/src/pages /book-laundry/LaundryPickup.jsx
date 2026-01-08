@@ -391,7 +391,7 @@ export default function LaundryPickup() {
                 <h2 className="text-xl text-white">Pricing</h2>
                 <div className="bg-(--bgGrey) rounded-lg px-2 space-y-3 pb-5 pt-4">
                   <div>
-                    <span className="text-white text-sm">Total price</span>
+                    <span className="text-white text-sm">Total price </span>
                     <input
                       type="number"
                       placeholder="NGN"
@@ -413,7 +413,7 @@ export default function LaundryPickup() {
                 <div>
                   <button
                     type="submit"
-                    className="border-0  text-white py-2 px-24 md:px-13 rounded-3xl bg-(--purple)"
+                    className=" btn border-0  text-white py-2 px-24 md:px-13 rounded-3xl bg-(--purple)"
                   >
                     Proceed To Summary
                   </button>
