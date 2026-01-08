@@ -46,7 +46,7 @@ export default function ForgotPassword() {
                 type="email"
                 placeholder="Johndoe@email.com"
                 {...register("email")}
-                className="input input-md w-full border text-black py-3 px-3 rounded-xl  bg-white"
+                className="input input-md w-full border-0 text-black py-3 px-3 rounded-xl  bg-white"
               />
             </label>
             {errors.email && (
@@ -55,7 +55,7 @@ export default function ForgotPassword() {
           </div>
 
           <button
-            className="btn btn-accent border bg-(--purple) rounded-3xl  py-3 w-full mt-12 flex justify-center gap-2"
+            className="btn btn-accent border-0 bg-(--purple) rounded-3xl  py-3 w-full mt-12 flex justify-center gap-2"
             type="submit"
             disabled={mutation.isPending}
           >

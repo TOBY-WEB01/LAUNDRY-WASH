@@ -5,9 +5,9 @@ export default function ForgetLayout() {
   return (
     <div
       className="bg-cover h-screen"
-      style={{ backgroundImage: "url('./image 9.png')" }}
+      style={{ backgroundImage: "url('/image 9.png')" }}
     >
-      <div className=" mx-auto flex justify-center pt-10">
+      <div className=" mx-auto flex justify-center pt-10 ">
         <Link>
           <LogoTwo />
         </Link>
